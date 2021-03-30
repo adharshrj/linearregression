@@ -14,19 +14,23 @@ data=pd.read_csv('data location') #for a CSV file
 data=pd.read_excel('data location')#for an excel file
 
 #check the number of rows and columns
+
 data.shape
 
 #plot the graph, choose graph type based on your requirement
+
 data.plot(kind='graph type' x='x axis' y='axis')
 plt.show #displays the plot
 
 data.corr() #find the correlation coefficents
 
 #convert to dataframe
+
 xnew=pd.DataFrame(data['x axis'])
 ynew=pd.DataFrame(data['y axis'])
 
 #apply linear regression
+
 lm= linear_model.LinearRegression() 
 model= lm.fit(xnew,ynew)
 
